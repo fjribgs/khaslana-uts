@@ -10,6 +10,7 @@ body {
     font-family: 'Google Sans';
 }
 
+/* navbar start */
 .navbar {
     display: flex;
     position: fixed;
@@ -44,9 +45,40 @@ body {
     font-weight: 500;
 }
 
-.navbar-right a {
+.navbar-right li a {
+    position: relative;
     color: #989898;
     text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.navbar-right li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms cubic-bezier(.4,0,.2,1);
+}
+
+.navbar-right li a:hover {
+    color: white;
+}
+
+.navbar-right li a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-right li a.navbar-active {
+    color: white;
+}
+
+.navbar-right li a.navbar-active::after {
+    transform: scaleX(1);
 }
 
 .navbar-right .btn-primary {
@@ -55,7 +87,9 @@ body {
     padding: 12px 26px;
     border-radius: 100px;
 }
+/* navbar end */
 
+/* hero start */
 .hero-section {
     display: flex;
     height: 100vh;
@@ -137,13 +171,26 @@ body {
     border-radius: 100px;
     text-decoration: none;
 }
+/* hero end */
 
+/* btn style start */
 .btn-primary {
     color: #1E1B26;
     background-color: #99FF33;
+    border: 1px #99FF33 solid;
     border-radius: 100px;
     padding: 14px 25px;
     font-weight: 500;
+    text-decoration: none;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.btn-primary:hover {
+    color: #99FF33;
+    background-color: transparent;
+    transition: all;
+    transition-duration: 200ms;
 }
 
 .btn-secondary {
@@ -153,8 +200,19 @@ body {
     border-radius: 100px;
     padding: 14px 25px;
     font-weight: 500;
+    transition: all;
+    transition-duration: 300ms;
 }
 
+.btn-secondary:hover {
+    color: #1E1B26;
+    background-color: #99FF33;
+    transition: all;
+    transition-duration: 200ms;
+}
+/* btn style end */
+
+/* umkm start */
 .umkm-section {
     display: flex;
     flex-direction: column;
@@ -243,7 +301,9 @@ body {
     background-color: #99FF33;
     flex: 1;
 }
+/* umkm end */
 
+/* responsive needs */
 @media (min-width: 1533px) {
     .navbar {
         padding: 25px 60px;
