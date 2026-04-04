@@ -276,6 +276,16 @@ body {
 }
 /* Button End */
 
+.back-to-home {
+  color: white;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.back-to-home a {
+  color: #99FF33;
+}
+
 @media (max-width: 768px) {
   .auth {
     display: flex;
