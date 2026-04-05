@@ -116,7 +116,7 @@ button {
     gap: 20px;
     height: auto;
     min-height: 100vh;
-    padding: 0px 55px;
+    padding: 20px 55px;
     box-sizing: border-box;
 }
 
@@ -305,11 +305,11 @@ button {
 
 @media (max-width: 500px) {
     .community-header {
-        padding: 90px 25px;
+        padding: 90px 25px 20px 25px;
     }
 
     .community-container {
-        padding: 0 20px;
+        padding: 20px 20px;
     }
 
     .post-bottom {
